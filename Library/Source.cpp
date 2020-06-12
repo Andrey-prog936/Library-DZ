@@ -79,7 +79,6 @@ public:
 		{
 			if (arr[i].name != "")
 			{
-
 				cout << "Name: " << arr[i].name << endl;
 				cout << "Autor: " << arr[i].autor << endl;
 				cout << "Publishing: " << arr[i].publishing << endl;
@@ -119,7 +118,6 @@ public:
 			}
 		}
 	}
-
 	void SearchPublishing(string g)
 	{
 		cout << endl << endl;
@@ -185,27 +183,6 @@ public:
 				PrintForSearch(i);
 			}
 		}
-		//###############################################
-	}
-	char mass[52] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J','K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T','U', 'V', 'W', 'X', 'Y', 'Z',
-					  'a', 'b', 'c', 'd','e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n','o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x','y', 'z' };
-	void SortAlp()
-	{
-		char a = ' ';
-		for (int i = 0; i < size; i++)
-		{
-			a = arr[i].name.c_str()[0];
-			for (int j = 0; j < 52; j++)
-			{
-				if (a == mass[j])
-				{
-					cout << arr[i].name << endl;
-					break; break;
-				}
-
-			}
-		}
-
 	}
 };
 //###################################################
@@ -217,7 +194,9 @@ int main()
 	Book b1("Dead Dynasty", "Olga", "Oreo", 1999, 10);
 	Book b2("Formula life ", "Kate", "Oreo", 2008, 8);
 	Book b3("Dead Note", "Oleg", "Wno", 1329, 9);
+	cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
 	b1.Print();
+	cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
 	Library lib(b2);
 	lib.operator=(b1);
 	lib.operator=(b2);
@@ -232,9 +211,6 @@ int main()
 	lib.SortYear();
 	lib.Print();
 	cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
-	lib.SortAlp();
-
-
 
 	system("pause");
 	return 0;
